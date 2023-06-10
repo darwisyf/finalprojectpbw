@@ -16,7 +16,7 @@ let getMovie = () => {
     //if input terisi
     else {
         fetch(url).then((resp) => resp.json()).then((data) => {
-            //if movie exist in database
+            //if judul ada di database
             if (data.Response == "True") {
                 result.innerHTML = `
                     <div class="info">
@@ -44,12 +44,12 @@ let getMovie = () => {
                 `;
             }
 
-            //if movie doesn't exist in database
+            //if judul tidak ada di database
             else {
                 result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
             }
         })
-            //if error occurs
+            //if Error
             .catch(() => {
                 result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
             });
