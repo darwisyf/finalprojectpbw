@@ -9,7 +9,7 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(#1c1917 50%, #ffb92a 50%);
+    background: linear-gradient(#222831 50%, #FFD369 50%);
 }
 
 .container{
@@ -50,9 +50,18 @@ body{
 }
 
 .search-container button{
-    background-color: #ffb92a;
+    background-color: #FFD369;
     border: none;
     cursor: pointer;
+}
+
+.search-container button:hover{
+    background-color: #FFD369;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: solid white 2px;
+    transition: ease-in-out .2s;
 }
 
 #result{
